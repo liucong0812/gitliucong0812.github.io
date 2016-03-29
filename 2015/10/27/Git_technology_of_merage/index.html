@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>我是一颗葱</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git_technology_of_meragegit分支（branch）的操作命令1.查看本地分支：   $ git branch 或者 $ git branch -l
+2.查看远程分支 ：  $ git branch -r    或者 $ git brach -a
+-r是仅查询远程的分支， -a查询包含远程分支和本地分支
+3.创建本地分支：$ git branch name
+name为你想要创">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我是一颗葱">
+<meta property="og:url" content="http://yoursite.com/2015/10/27/Git_technology_of_merage/index.html">
+<meta property="og:site_name" content="我是一颗葱">
+<meta property="og:description" content="git_technology_of_meragegit分支（branch）的操作命令1.查看本地分支：   $ git branch 或者 $ git branch -l
+2.查看远程分支 ：  $ git branch -r    或者 $ git brach -a
+-r是仅查询远程的分支， -a查询包含远程分支和本地分支
+3.创建本地分支：$ git branch name
+name为你想要创">
+<meta property="og:updated_time" content="2015-10-27T12:32:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我是一颗葱">
+<meta name="twitter:description" content="git_technology_of_meragegit分支（branch）的操作命令1.查看本地分支：   $ git branch 或者 $ git branch -l
+2.查看远程分支 ：  $ git branch -r    或者 $ git brach -a
+-r是仅查询远程的分支， -a查询包含远程分支和本地分支
+3.创建本地分支：$ git branch name
+name为你想要创">
+  
+    <link rel="alternate" href="/atom.xml" title="我是一颗葱" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">我是一颗葱</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">我可避雨在那蜂胶两件</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Git_technology_of_merage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/10/27/Git_technology_of_merage/" class="article-date">
+  <time datetime="2015-10-27T12:32:43.000Z" itemprop="datePublished">2015-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-technology-of-merage"><a href="#git-technology-of-merage" class="headerlink" title="git_technology_of_merage"></a>git_technology_of_merage</h2><h3 id="git分支（branch）的操作命令"><a href="#git分支（branch）的操作命令" class="headerlink" title="git分支（branch）的操作命令"></a>git分支（branch）的操作命令</h3><p>1.查看本地分支：   <strong>$ git branch</strong> 或者 <strong>$ git branch -l</strong></p>
+<p>2.查看远程分支 ：  <strong>$ git branch -r</strong>    或者 <strong>$ git brach -a</strong></p>
+<p><code>-r是仅查询远程的分支， -a查询包含远程分支和本地分支</code></p>
+<p>3.创建本地分支：<strong>$ git branch name</strong></p>
+<p><code>name为你想要创建的分支名 并且创建分之后不会自动切换到新的分支；</code></p>
+<p>4.切换分支 ： <strong>$ git checkout name</strong> </p>
+<p><code>可以先查询本地的分支，然后再checkout到你想要切换的分支；</code></p>
+<p>5.创建新分支并立即切换到新分支：<strong>$ git checkout -b name</strong></p>
+<p><code>此命令可以直创建成功后切换到你所新创建的分支</code></p>
+<p>6.删除分支：<strong> $ git branch -d name </strong> </p>
+<p><code>-d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项</code></p>
+<p>7.创建远程分支(本地分支push到远程)：<strong>$ git push origin [name]</strong></p>
+<p><code>创建远程分支，并且同时把本地当前分支下的内容推送到所新建的远程分支</code></p>
+<p>8.删除远程分支：<strong>$ git push origin :heads/[name]</strong> 或 $ <strong>git push origin :[name]</strong> </p>
+<p>如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$git push origin test:master         </span><br><span class="line">// 提交本地test分支作为远程的master分支</span><br><span class="line"></span><br><span class="line">$git push origin test:test           </span><br><span class="line">// 提交本地test分支作为远程的test分支</span><br></pre></td></tr></table></figure>
+<h3 id="git分支合并（merge）的操作"><a href="#git分支合并（merge）的操作" class="headerlink" title="git分支合并（merge）的操作"></a>git分支合并（merge）的操作</h3><p> 在git中，可以使用 <strong>git merge</strong> 和 <strong>git rebase</strong> 两个命令来进行分支的合并。<br><strong>git merge</strong> 和 <strong>git rebase</strong> 在大体上都差不多，下文主要以 <strong>git merge</strong> 来例来讲解分支的合并流程。 </p>
+<p>git命令： <strong>$ git merge branchname </strong>   </p>
+<p>—-这个命令把分支”branchname”合并到了当前分支里面。 </p>
+<p>  <strong><em>在执行这个命令前，需要先查看你当前所在的分支，是否是两个合并的分支中的一个，如果不是你想要合并的分支，先切换到两个分支中的一个，然后才可以进行合并的命令。如果在本地中未找到你想要的分支，你就需要把所有这个git库所有的分支先 pull 下来</em></strong></p>
+<p> <strong>下拉所有当前库中的所有分支 ： $ git pull – all</strong></p>
+<p> —- 在进行上面操作时需要先把分支切换到主分支</p>
+<p> 当你成功切换到其中一条分支后执行以下命令</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git merge otherBranchName </span><br><span class="line"></span><br><span class="line">----otherBranchNmae 就是另外一条分支。</span><br></pre></td></tr></table></figure>
+<h3 id="解决合并中的冲突"><a href="#解决合并中的冲突" class="headerlink" title="解决合并中的冲突"></a>解决合并中的冲突</h3><p>如果执行自动合并没有成功的话，git会在索引和工作树里设置一个特殊的状态， 提示你如何解决合并中出现的冲突。<br>有冲突(conflicts)的文件会保存在<strong>索引</strong>中，除非你解决了问题了并且更新了索引，否则执行 git commit都会失败:</p>
+<p>如果存在冲突，当你执行 $ git commit 命令后 执行 git status 会显示这些文件没有合并(unmerged),这些有冲突的文件里面会添加像下面的冲突标识符:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fileName : needs merge</span><br><span class="line"></span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:file.txt</span><br><span class="line"></span><br><span class="line">Hello world</span><br><span class="line"></span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">Goodbye</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 77976da35a11db4580b80ae27e8d65caf5208086:file.txt</span><br></pre></td></tr></table></figure>
+<p>你所需要的做是就是编辑解决冲突，（接着把冲突标识符删掉），再执行下面的命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m “”</span><br></pre></td></tr></table></figure>
+<h3 id="撒销一个合并"><a href="#撒销一个合并" class="headerlink" title="撒销一个合并"></a>撒销一个合并</h3><p>如果你觉得你合并后的状态是一团乱麻，想把当前的修改都放弃，你可以用下面的命令回到合并之前的状态：</p>
+<p><strong>$ git reset –hard HEAD</strong></p>
+<p><code>次命令不仅仅局限于撤销分支的合并。当你在在本地修改代码后，对于自己修改的不满意，并且不想自己手动改回去，可以执行上面的代码，代码会自动恢复到最后一次commit的版本。</code></p>
+<p>或者你已经把合并后的代码提交，但还是想把它们撒销：<br><strong>$ git reset –hard ORIG_HEAD</strong></p>
+<p><code>但是刚才这条命令在某些情况会很危险，如果你把一个已经被另一个分支合并的分支给删了，那么 以后在合并相关的分支时会出错。</code></p>
+<p>关于撤销的更多内容请参考:</p>
+<p><a href="http://hubingforever.blog.163.com/blog/static/1710405792012411094228/" target="_blank" rel="external">《git reset简介》</a></p>
+<p>更多内容可以参看 </p>
+<p><a href="http://blog.csdn.net/hudashi/article/details/7668798" target="_blank" rel="external">git合并与冲突的解决</a></p>
+<p><a href="http://gitbook.liuhui998.com/3_3.html" target="_blank" rel="external">分支与合并@基础</a></p>
+<p><a href="http://gitbook.liuhui998.com/5_3.html" target="_blank" rel="external">高级分支与合并</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/10/27/Git_technology_of_merage/" data-id="cimda1k5k0001x7438o25jbaf" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/10/27/cocoapods/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/10/27/how_to_creation_ssh/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/03/29/my-first-Blog/">my first Blog</a>
+          </li>
+        
+          <li>
+            <a href="/2016/03/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/27/cocoapods/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/27/Git_technology_of_merage/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/10/27/how_to_creation_ssh/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Chris Liu<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
