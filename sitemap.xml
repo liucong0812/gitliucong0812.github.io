@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/03/29/CocoaPods%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
+    
+    <lastmod>2016-03-30T06:03:49.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/03/29/my-first-Blog/</loc>
+    
+    <lastmod>2016-03-30T06:03:40.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2016-03-30T05:52:00.000Z</lastmod>
@@ -33,20 +47,6 @@
     <loc>http://yoursite.com/2016/03/29/git%E4%BD%BF%E7%94%A8-merage/</loc>
     
     <lastmod>2016-03-29T10:29:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/03/29/CocoaPods%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
-    
-    <lastmod>2016-03-29T10:28:51.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/03/29/my-first-Blog/</loc>
-    
-    <lastmod>2016-03-29T10:19:49.000Z</lastmod>
     
   </url>
   
