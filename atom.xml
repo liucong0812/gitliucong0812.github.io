@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>我是一颗葱</title>
+  <subtitle>我说风雨中这点痛算什么！！！</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-03-30T06:17:55.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Chris Liu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git使用-merage</title>
+    <link href="http://yoursite.com/2016/03/29/git%E4%BD%BF%E7%94%A8-merage/"/>
+    <id>http://yoursite.com/2016/03/29/git使用-merage/</id>
+    <published>2016-03-29T10:28:13.000Z</published>
+    <updated>2016-03-30T06:17:55.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Git使用—-merage&quot;&gt;&lt;a href=&quot;#Git使用—-merage&quot; class=&quot;headerlink&quot; title=&quot;Git使用—-merage&quot;&gt;&lt;/a&gt;Git使用—-merage&lt;/h2&gt;&lt;p&gt;在版本回退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。&lt;/p&gt;
+&lt;p&gt;一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;strong&gt;阅读全文&amp;gt;&amp;gt;&lt;/strong&gt;&lt;br&gt;&lt;br&gt;### git分支（branch）的操作命令&lt;br&gt;1.查看本地分支：   &lt;strong&gt;$ git branch&lt;/strong&gt; 或者 &lt;strong&gt;$ git branch -l&lt;/strong&gt;&lt;br&gt;&lt;br&gt;2.查看远程分支 ：  &lt;strong&gt;$ git branch -r&lt;/strong&gt;    或者 &lt;strong&gt;$ git brach -a&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;-r是仅查询远程的分支， -a查询包含远程分支和本地分支&lt;/code&gt;&lt;br&gt;&lt;br&gt;3.创建本地分支：&lt;strong&gt;$ git branch name&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;name为你想要创建的分支名 并且创建分之后不会自动切换到新的分支；&lt;/code&gt;&lt;br&gt;&lt;br&gt;4.切换分支 ： &lt;strong&gt;$ git checkout name&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;可以先查询本地的分支，然后再checkout到你想要切换的分支；&lt;/code&gt;&lt;br&gt;&lt;br&gt;5.创建新分支并立即切换到新分支：&lt;strong&gt;$ git checkout -b name&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;此命令可以直创建成功后切换到你所新创建的分支&lt;/code&gt;&lt;br&gt;&lt;br&gt;6.删除分支：&lt;strong&gt; $ git branch -d name &lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;-d选项只能删除已经参与了合并的分支，对于未有合并的分支是无法删除的。如果想强制删除一个分支，可以使用-D选项&lt;/code&gt;&lt;br&gt;&lt;br&gt;7.创建远程分支(本地分支push到远程)：&lt;strong&gt;$ git push origin [name]&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;code&gt;创建远程分支，并且同时把本地当前分支下的内容推送到所新建的远程分支&lt;/code&gt;&lt;br&gt;&lt;br&gt;8.删除远程分支：&lt;strong&gt;$ git push origin :heads/[name]&lt;/strong&gt; 或 $ &lt;strong&gt;git push origin :[name]&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;如果想把本地的某个分支test提交到远程仓库，并作为远程仓库的master分支，或者作为另外一个名叫test的分支，如下：&lt;br&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$git push origin test:master         &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 提交本地test分支作为远程的master分支&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$git push origin test:test           &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;// 提交本地test分支作为远程的test分支&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;git分支合并（merge）的操作&quot;&gt;&lt;a href=&quot;#git分支合并（merge）的操作&quot; class=&quot;headerlink&quot; title=&quot;git分支合并（merge）的操作&quot;&gt;&lt;/a&gt;git分支合并（merge）的操作&lt;/h3&gt;&lt;p&gt; 在git中，可以使用 &lt;strong&gt;git merge&lt;/strong&gt; 和 &lt;strong&gt;git rebase&lt;/strong&gt; 两个命令来进行分支的合并。&lt;br&gt;&lt;strong&gt;git merge&lt;/strong&gt; 和 &lt;strong&gt;git rebase&lt;/strong&gt; 在大体上都差不多，下文主要以 &lt;strong&gt;git merge&lt;/strong&gt; 来例来讲解分支的合并流程。 &lt;/p&gt;
+&lt;p&gt;git命令： &lt;strong&gt;$ git merge branchname &lt;/strong&gt;   &lt;/p&gt;
+&lt;p&gt;—-这个命令把分支”branchname”合并到了当前分支里面。 &lt;/p&gt;
+&lt;p&gt;  &lt;strong&gt;&lt;em&gt;在执行这个命令前，需要先查看你当前所在的分支，是否是两个合并的分支中的一个，如果不是你想要合并的分支，先切换到两个分支中的一个，然后才可以进行合并的命令。如果在本地中未找到你想要的分支，你就需要把所有这个git库所有的分支先 pull 下来&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;下拉所有当前库中的所有分支 ： $ git pull – all&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; —- 在进行上面操作时需要先把分支切换到主分支&lt;/p&gt;
+&lt;p&gt; 当你成功切换到其中一条分支后执行以下命令&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git merge otherBranchName &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;----otherBranchNmae 就是另外一条分支。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;解决合并中的冲突&quot;&gt;&lt;a href=&quot;#解决合并中的冲突&quot; class=&quot;headerlink&quot; title=&quot;解决合并中的冲突&quot;&gt;&lt;/a&gt;解决合并中的冲突&lt;/h3&gt;&lt;p&gt;如果执行自动合并没有成功的话，git会在索引和工作树里设置一个特殊的状态， 提示你如何解决合并中出现的冲突。&lt;br&gt;有冲突(conflicts)的文件会保存在&lt;strong&gt;索引&lt;/strong&gt;中，除非你解决了问题了并且更新了索引，否则执行 git commit都会失败:&lt;/p&gt;
+&lt;p&gt;如果存在冲突，当你执行 $ git commit 命令后 执行 git status 会显示这些文件没有合并(unmerged),这些有冲突的文件里面会添加像下面的冲突标识符:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;fileName : needs merge&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD:file.txt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Hello world&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;=======&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Goodbye&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; 77976da35a11db4580b80ae27e8d65caf5208086:file.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;你所需要的做是就是编辑解决冲突，（接着把冲突标识符删掉），再执行下面的命令:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git commit -m “”&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;撒销一个合并&quot;&gt;&lt;a href=&quot;#撒销一个合并&quot; class=&quot;headerlink&quot; title=&quot;撒销一个合并&quot;&gt;&lt;/a&gt;撒销一个合并&lt;/h3&gt;&lt;p&gt;如果你觉得你合并后的状态是一团乱麻，想把当前的修改都放弃，你可以用下面的命令回到合并之前的状态：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;$ git reset –hard HEAD&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;次命令不仅仅局限于撤销分支的合并。当你在在本地修改代码后，对于自己修改的不满意，并且不想自己手动改回去，可以执行上面的代码，代码会自动恢复到最后一次commit的版本。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;或者你已经把合并后的代码提交，但还是想把它们撒销：&lt;br&gt;&lt;strong&gt;$ git reset –hard ORIG_HEAD&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;但是刚才这条命令在某些情况会很危险，如果你把一个已经被另一个分支合并的分支给删了，那么 以后在合并相关的分支时会出错。&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;关于撤销的更多内容请参考:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://hubingforever.blog.163.com/blog/static/1710405792012411094228/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《git reset简介》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;更多内容可以参看 &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/hudashi/article/details/7668798&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;git合并与冲突的解决&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://gitbook.liuhui998.com/3_3.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;分支与合并@基础&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://gitbook.liuhui998.com/5_3.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;高级分支与合并&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Git使用—-merage&quot;&gt;&lt;a href=&quot;#Git使用—-merage&quot; class=&quot;headerlink&quot; title=&quot;Git使用—-merage&quot;&gt;&lt;/a&gt;Git使用—-merage&lt;/h2&gt;&lt;p&gt;在版本回退里，你已经知道，每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。&lt;/p&gt;
+&lt;p&gt;一开始的时候，master分支是一条线，Git用master指向最新的提交，再用HEAD指向master，就能确定当前分支，以及当前分支的提交点：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>创建SSH</title>
+    <link href="http://yoursite.com/2016/03/29/%E5%88%9B%E5%BB%BASSH/"/>
+    <id>http://yoursite.com/2016/03/29/创建SSH/</id>
+    <published>2016-03-29T10:27:46.000Z</published>
+    <updated>2016-03-30T06:14:46.000Z</updated>
+    
+    <content type="html">&lt;p&gt;#How to Creation SSH&lt;br&gt;SSH是&lt;code&gt;Source Shell Protocol&lt;/code&gt;的缩写，SSh是为建立在&lt;code&gt;应用层&lt;/code&gt;和&lt;code&gt;传输层&lt;/code&gt;基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。&lt;/p&gt;
+&lt;p&gt;SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平台，几乎所有的UNIX平台，包括HP-UX、Linux、AIX、Solaris等等&lt;/p&gt;
+&lt;p&gt;传统的网络服务程序，比如ftp、pop和telnet在本质上都是不安全的，因为他们在网络上是用明文进行口令的传输，有一些别有用心的人就可以非常容易的截取这些口令和数据。&lt;/p&gt;
+&lt;p&gt;通过SSH，可以把所有传输的数据进行加密，而且SSH还有一个额外的好处就是传输的数据是经过加密处理的，所以可以加快传输的速度。SSH还有其他的很多功能，他既可以替代Telnet，又可以为FTP、PoP、甚至是PPP提供一个安全的通道。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;strong&gt;阅读全文&amp;gt;&amp;gt;&lt;/strong&gt;&lt;br&gt;&lt;br&gt;## SSH 功能&lt;br&gt;&lt;br&gt;SSH可以提供两种功能：&lt;br&gt;&lt;br&gt;1. SSH服务，提供远程登录&lt;br&gt;2. 类似于FTP的sftp-server，用于基于ssh的文件传输&lt;br&gt;&lt;br&gt;&lt;br&gt;## SSH工作机制：&lt;br&gt;&lt;br&gt;他们的工作机制大致是本地客户端发送一个连接请求到远程服务器，服务端检查申请的包和ip地址再发送密钥给ssh的客户端，本地再将密钥发送给服务端，自此建立连接。&lt;br&gt;&lt;br&gt;&lt;br&gt;## 连接方式&lt;br&gt;&lt;br&gt;###version 1&lt;br&gt;ssh主机（Server端）用RSA加密方式产生一个1024bit的RSA-key，用来产生公约与私钥的演算方法：&lt;br&gt;&lt;br&gt;1. 当ssh daemon（sshd）启动时，就会产生一个768-bit的公钥（或称为Server Key）存放在Server中&lt;br&gt;2. 当client端的联机请求发送后，Server将公钥发送给client，此时client会对比判断公钥的正确性，判断的依据/etc/ssh/ssh_knownhosts、$HOME/.ssh/known_hosts&lt;br&gt;3. client端接收768bit的Server Key之后，client自己也随机产生一个256bit的私钥（private key，或host key），并且以加密的方式传送给Server&lt;br&gt;4. Server与client在此联机过程中，就以一对1024bit的key pair来进行数据的传递&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;strong&gt;补充说明：&lt;/strong&gt;&lt;br&gt;&lt;br&gt;Public Key是放在Server上，而Client的软件需要能接收Public Key，计算出Private key，并把二者的组合成一把独一无二的key pair（因为Client每次的256bit的Private key是随机产生的），在Client端的用户默认目录下$HOME/.ssh/known_keys会记录曾经联机过的主机的Public Key，用以确认每次来自该主机的联机是否正确&lt;br&gt;###version 2&lt;br&gt;在version 1的联机过程中，当Server接收Client的Private key之后，就不会针对该联机的key pair进行校验，如过黑客传送了恶意代码，由于主机端部会检验联机的正确性，所以可能会接收该程序代码。&lt;br&gt;&lt;br&gt;在version 2中增加了一个确认联机正确性的diff-hellman机制在每次数据传输中Server都会以这种机制校验资料来源是否正确&lt;br&gt;&lt;br&gt;&lt;br&gt;## OperSSL软件：&lt;br&gt;OpenSSL是一种比较常见的SSH服务端和客户端软件。提供了sshd、shell、sftp功能，其默认端口是22，在Redhat、CentOS等Linux操作系统中的默认SSH Daemon就是这个了。&lt;br&gt;&lt;br&gt;### 下面对这个软件的几种用法加以说明：&lt;br&gt;&lt;strong&gt;A. Server keys记录：$HOME/.ssh/known_hosts&lt;/strong&gt;&lt;br&gt;&lt;br&gt;当Client端接收来自Server端的Public key之后，会主动的对比这个key的正确性，有下面的两种情况：&lt;br&gt;&lt;br&gt;1. 没有记录，那么会出现提示，是否接收来自Server的Public Key&lt;br&gt;2. 对比成功，直接提示输入密码&lt;br&gt;3. 如果出现了这样的登录提示：&lt;strong&gt; warning: Remote host identification has changed &lt;/strong&gt;那么说明上次登录的远程ssh主机的key已经被更改了，原因可能是Server的重启、重装或者更新了相关的软件，这时候的处理方式是将$HOME/.ssh/known_hosts文件中与主机相关的字段删除，重新接收来自Server的Public key&lt;br&gt;&lt;br&gt;&lt;strong&gt;B. 设置不用输入用户名和密码就能立即登录的目标主机&lt;/strong&gt;&lt;br&gt;&lt;br&gt;原理：将Client端产生的key复制到Server中&lt;br&gt;&lt;br&gt;在Client向Server登录时，由于两者在ssh要联机的信号传递中，就已经对比过key了，因此可以立即进入数据传输，而不需要输入密码。&lt;br&gt;&lt;br&gt;1. 在Client端建立Public key和Private key两个密钥，命令为ssh-keygen&lt;br&gt;2. 将Private-key放在client的默认目录下，$HOME/.ssh，并为该用户可读的状态&lt;br&gt;3. 把Public key放在任何一个你希望要用来登录主机的Server的某user的默认目录中的认证文件中&lt;br&gt;&lt;br&gt;##生成 Git SSH-key&lt;br&gt;当你第一次从git资料库中clone项目时，可能会需要配置SSH-key，因为项目本地端和远程端的项目管理是基于SSH的，下面让我们一起看看SSH-key的配置过程。&lt;br&gt;&lt;br&gt;###设置Git的username 和 email&lt;br&gt;在你生成SSH前，需要在本地进行用户名和email的验证&lt;br&gt;&lt;br&gt;&lt;strong&gt;代码如下：&lt;/strong&gt;&lt;br&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.name &amp;quot;youruser.name&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git config --global user.email &amp;quot;youremailusername&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;###生成SSH密钥的过程：&lt;/p&gt;
+&lt;p&gt;####首先查看你的本地是否已经有ssh密钥&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cd ~/.ssh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;code&gt;如果没有密钥就不会有此文件，如有有悔备份删除&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;####生成密钥&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;youremailusername&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;连续按3个回车键，密码为空。&lt;/p&gt;
+&lt;p&gt;会得到以下消息:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Your identification has been saved in /home/tekkub/.ssh/id_rsa.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;The key fingerprint is:&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;最后会得到两个文件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;id_ rsa&lt;/li&gt;
+&lt;li&gt;id_rsa.pub&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;####查询SSH key&lt;/p&gt;
+&lt;p&gt;你的SSH key存在于生成的&lt;code&gt;id_rsa.pub&lt;/code&gt;的文件中，&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cat ~/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;当执行上条命令的时候，如果已经生成key，则会出现类似&lt;br&gt;&lt;strong&gt; ssh-rsa  AAAAB3NzaC1yc2EAAAADAQABAAABAQC2Z/MOZdADABODQjvGDK+5j7IBefKFQPOen0aq1GpIzPFHclL62ddhrbjQUZ9IeDhxYwDU7Aq….wisher@wisher.local &lt;/strong&gt;&lt;br&gt;的字符串，这个就是本地生成的SSH key。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#How to Creation SSH&lt;br&gt;SSH是&lt;code&gt;Source Shell Protocol&lt;/code&gt;的缩写，SSh是为建立在&lt;code&gt;应用层&lt;/code&gt;和&lt;code&gt;传输层&lt;/code&gt;基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。&lt;/p&gt;
+&lt;p&gt;SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平台，几乎所有的UNIX平台，包括HP-UX、Linux、AIX、Solaris等等&lt;/p&gt;
+&lt;p&gt;传统的网络服务程序，比如ftp、pop和telnet在本质上都是不安全的，因为他们在网络上是用明文进行口令的传输，有一些别有用心的人就可以非常容易的截取这些口令和数据。&lt;/p&gt;
+&lt;p&gt;通过SSH，可以把所有传输的数据进行加密，而且SSH还有一个额外的好处就是传输的数据是经过加密处理的，所以可以加快传输的速度。SSH还有其他的很多功能，他既可以替代Telnet，又可以为FTP、PoP、甚至是PPP提供一个安全的通道。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="基础技术" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CocoaPods的安装过程</title>
+    <link href="http://yoursite.com/2015/04/29/CocoaPods%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/"/>
+    <id>http://yoursite.com/2015/04/29/CocoaPods的安装过程/</id>
+    <published>2015-04-29T10:27:20.000Z</published>
+    <updated>2016-03-30T06:13:35.000Z</updated>
+    
+    <content type="html">&lt;p&gt;#CocoaPods&lt;/p&gt;
+&lt;p&gt;CocoaPods 是开发 OS X 和 iOS 应用程序的一个第三方库的依赖管理工具。利用 CocoaPods，可以定义自己的依赖关系 (称作 pods)，并且随着时间的变化，以及在整个开发环境中对第三方库的版本管理非常方便。&lt;/p&gt;
+&lt;p&gt;CocoaPods 背后的理念主要体现在两个方面。首先，在工程中引入第三方代码会涉及到许多内容。针对 Objective-C 初级开发者来说，工程文件的配置会让人很沮丧。在配置 build phases 和 linker flags 过程中，会引起许多人为因素的错误。CocoaPods 简化了这一切，它能够自动配置编译选项。&lt;/p&gt;
+&lt;p&gt;其次，通过 CocoaPods，可以很方便的查找到新的第三方库。当然，这并不是说你可以简单的将别人提供的库拿来拼凑成一个应用程序。它的真正作用是让你能够找到真正好用的库，以此来缩短我们的开发周期和提升软件的质量。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;strong&gt;阅读全文&amp;gt;&amp;gt;&lt;/strong&gt;&lt;br&gt;&lt;br&gt;##Cocoapods下载第三方过程&lt;br&gt;### 下载cocoapod的索引&lt;br&gt;在想要用cocoapods 下载第三方类的时候，首先需要先下载cocoapod的索引&lt;br&gt;&lt;br&gt;    $sudo gem install cocoapods&lt;br&gt;&lt;br&gt;这时间会很长，需要等待…. 等到命令执行成功后，再进行以下操作&lt;br&gt;&lt;br&gt;&lt;br&gt;### 搜索第三方的名字&lt;br&gt;&lt;br&gt;当执行完上面的命令后，在进行搜索就会比较快，如果没有上述命令没有执行完毕，就执行搜索。那么会重新执行上述命令。&lt;br&gt;&lt;br&gt;搜索命令：&lt;br&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod search &amp;quot;三方类名称&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;会得到：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CocoaPods 0.36.0.beta.2 is available.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;To update use: `gem install cocoapods --pre`&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[!] This is a test version we&amp;apos;d love you to try.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;For more information see http://blog.cocoapods.org&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;and the CHANGELOG for this version http://git.io/BaH8pQ.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Setup completed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; AF2OAuth1Client (0.3.6)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   AFNetworking 2 Extension for OAuth 1.0a Authentication.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    pod &amp;apos;AF2OAuth1Client&amp;apos;, &amp;apos;~&amp;gt; 0.3.6&amp;apos; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Homepage: https://github.com/AYastrebov/AF2OAuth1Client&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Source:   https://github.com/AYastrebov/AF2OAuth1Client.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Versions: 0.3.6 [master repo]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; AFAbstractRESTClient (1.0)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   AFAbstractRESTClient is simple abstract solution to deal with REST&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   webservices using AFNetworking.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   pod &amp;apos;AFAbstractRESTClient&amp;apos;, &amp;apos;~&amp;gt; 1.0&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Homepage: https://github.com/burczyk/AFAbstractRESTClient&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Source:   https://github.com/burczyk/AFAbstractRESTClient.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Versions: 1.0 [master repo]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-&amp;gt; AFAddressBookManager (1.1)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   Get contacts from AddressBook by their phone numbers.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   pod &amp;apos;AFAddressBookManager&amp;apos;, &amp;apos;~&amp;gt; 1.1&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Homepage: https://github.com/Fogh/AFAddressBookManager&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Source:   https://github.com/Fogh/AFAddressBookManager.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   - Versions: 1.1, 1.0.1, 1.0, 0.1.1, 0.1 [master repo]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;编辑-Podfile&quot;&gt;&lt;a href=&quot;#编辑-Podfile&quot; class=&quot;headerlink&quot; title=&quot;编辑 Podfile&quot;&gt;&lt;/a&gt;编辑 Podfile&lt;/h3&gt;&lt;p&gt;使用你喜欢的方式打开Podfile文件，&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$vim Podfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;先编辑Podfile中的模板&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Uncomment this line to define a global platform for your project&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;platform :ios, &amp;apos;6.0&amp;apos; ==&amp;gt; **6.0代表支持的最低版本**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;target &amp;apos;APPName&amp;apos; do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;end&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;target &amp;apos;APPNameTests&amp;apos; do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;end&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后把上述得出的命令中 &lt;code&gt;pod &amp;#39;AF2OAuth1Client&amp;#39;, &amp;#39;~&amp;gt; 0.3.6&amp;#39;&lt;/code&gt;编写进Podfile中&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Uncomment this line to define a global platform for your project&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;platform :ios, &amp;apos;6.0&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pod &amp;apos;AF2OAuth1Client&amp;apos;, &amp;apos;~&amp;gt; 0.3.6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;target &amp;apos;GuruJam&amp;apos; do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;end&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;target &amp;apos;GuruJamTests&amp;apos; do&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;end&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;退出保存。&lt;/p&gt;
+&lt;h3 id=&quot;下载或者更新-；&quot;&gt;&lt;a href=&quot;#下载或者更新-；&quot; class=&quot;headerlink&quot; title=&quot;下载或者更新 ；&quot;&gt;&lt;/a&gt;下载或者更新 ；&lt;/h3&gt;&lt;p&gt;如果你是第一次进行下载 那么执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果你这个项目不是第一次下载第三方那个，需要执行&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;更新并不是强制这样！！！ 可以执行 &lt;code&gt;pod install&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;在没有执行下载索引的时候下载或者更新第三方那个&quot;&gt;&lt;a href=&quot;#在没有执行下载索引的时候下载或者更新第三方那个&quot; class=&quot;headerlink&quot; title=&quot;在没有执行下载索引的时候下载或者更新第三方那个&quot;&gt;&lt;/a&gt;在没有执行下载索引的时候下载或者更新第三方那个&lt;/h3&gt;&lt;p&gt;如果你已经知道你想要下载的第三方的版本，可以直接添加到Podfile中&lt;/p&gt;
+&lt;p&gt;然后执行:&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod install --verbose --no-repo-update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pod update --verbose --no-repo-update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样会为你节省很多的时间！！！！&lt;/p&gt;
+&lt;h3 id=&quot;检查工程是否可以使用&quot;&gt;&lt;a href=&quot;#检查工程是否可以使用&quot; class=&quot;headerlink&quot; title=&quot;检查工程是否可以使用&quot;&gt;&lt;/a&gt;检查工程是否可以使用&lt;/h3&gt;&lt;p&gt;首先试着引入第三方的头文件。&lt;/p&gt;
+&lt;p&gt;相信我 百分之八十是导不进来的 。。。&lt;/p&gt;
+&lt;p&gt;那是以为你没有修改你的头文件路径，所以你就需要添加头文件路径。&lt;/p&gt;
+&lt;p&gt;设置方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;找到： Target -&amp;gt; Build Settings -&amp;gt; Search Path -&amp;gt; User Header Search Path&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;添加： $&amp;#123;SRCROOT&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;修改：  后面的选项选为 recursive。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后试试吧。。  看看能不能导入头文件了 &lt;/p&gt;
+&lt;p&gt;##删除项目中的cocopod文件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;删除工程文件夹下的Podfile、Podfile.lock和Pods文件夹。&lt;/li&gt;
+&lt;li&gt;删除xcworkspace 文件&lt;/li&gt;
+&lt;li&gt;打开xcodeproj文件 删除项目中的libpods.a 和 Pods.xcconfig引用&lt;img src=&quot;http://img.blog.csdn.net/20140214225805921&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot;&gt;&lt;/li&gt;
+&lt;li&gt;打开Build Phases选项，删除Check Pods Manifest.lock和Copy Pods Resources：&lt;img src=&quot;http://img.blog.csdn.net/20140214230048593&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot;&gt;&lt;/li&gt;
+&lt;li&gt;完成，编译运行，无错通过。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;ps:如果将cocoapods集成到工程中后不小心修改或删除了其相关文件导致无法便以通过例如：不小心把&lt;br&gt;Pods.xcconfig给删除了然后出现diff: /../Podfile.lock: No such file or directory，用上面的方法删除cocoapods后，&lt;br&gt;再重新$sudo pod install一下就好了。&lt;br&gt;如果编译的时候出现权限问题，对工程文件夹$sudo chmod 777 path-to-project-folder/&lt;em&gt;&lt;br&gt;$sudo chown 777 path-to-project-folder/&lt;/em&gt;&lt;br&gt;即可。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#CocoaPods&lt;/p&gt;
+&lt;p&gt;CocoaPods 是开发 OS X 和 iOS 应用程序的一个第三方库的依赖管理工具。利用 CocoaPods，可以定义自己的依赖关系 (称作 pods)，并且随着时间的变化，以及在整个开发环境中对第三方库的版本管理非常方便。&lt;/p&gt;
+&lt;p&gt;CocoaPods 背后的理念主要体现在两个方面。首先，在工程中引入第三方代码会涉及到许多内容。针对 Objective-C 初级开发者来说，工程文件的配置会让人很沮丧。在配置 build phases 和 linker flags 过程中，会引起许多人为因素的错误。CocoaPods 简化了这一切，它能够自动配置编译选项。&lt;/p&gt;
+&lt;p&gt;其次，通过 CocoaPods，可以很方便的查找到新的第三方库。当然，这并不是说你可以简单的将别人提供的库拿来拼凑成一个应用程序。它的真正作用是让你能够找到真正好用的库，以此来缩短我们的开发周期和提升软件的质量。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Objective-C" scheme="http://yoursite.com/tags/Objective-C/"/>
+    
+  </entry>
+  
+</feed>
