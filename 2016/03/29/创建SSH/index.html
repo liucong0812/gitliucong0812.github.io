@@ -1,0 +1,781 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicons.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="#How to Creation SSH
+##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="创建SSH">
+<meta property="og:url" content="http://yoursite.com/2016/03/29/创建SSH/index.html">
+<meta property="og:site_name" content="我是一颗葱">
+<meta property="og:description" content="#How to Creation SSH
+##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
+<meta property="og:updated_time" content="2016-03-29T10:59:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="创建SSH">
+<meta name="twitter:description" content="#How to Creation SSH
+##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 创建SSH | 我是一颗葱 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">我是一颗葱</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">我说风雨中这点痛算什么！！！</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                创建SSH
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-29T18:27:46+08:00" content="2016-03-29">
+              2016-03-29
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/29/创建SSH/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/29/创建SSH/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#How to Creation SSH</p>
+<p>##SSH<br>SSH是<code>Source Shell Protocol</code>的缩写，SSh是为建立在<code>应用层</code>和<code>传输层</code>基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。</p>
+<p>SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平台，几乎所有的UNIX平台，包括HP-UX、Linux、AIX、Solaris等等</p>
+<p>传统的网络服务程序，比如ftp、pop和telnet在本质上都是不安全的，因为他们在网络上是用明文进行口令的传输，有一些别有用心的人就可以非常容易的截取这些口令和数据。</p>
+<p>通过SSH，可以把所有传输的数据进行加密，而且SSH还有一个额外的好处就是传输的数据是经过加密处理的，所以可以加快传输的速度。SSH还有其他的很多功能，他既可以替代Telnet，又可以为FTP、PoP、甚至是PPP提供一个安全的通道。</p>
+<h2 id="SSH-功能"><a href="#SSH-功能" class="headerlink" title="SSH 功能"></a>SSH 功能</h2><p>SSH可以提供两种功能：</p>
+<ol>
+<li>SSH服务，提供远程登录</li>
+<li>类似于FTP的sftp-server，用于基于ssh的文件传输</li>
+</ol>
+<h2 id="SSH工作机制："><a href="#SSH工作机制：" class="headerlink" title="SSH工作机制："></a>SSH工作机制：</h2><p>他们的工作机制大致是本地客户端发送一个连接请求到远程服务器，服务端检查申请的包和ip地址再发送密钥给ssh的客户端，本地再将密钥发送给服务端，自此建立连接。</p>
+<h2 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h2><p>###version 1<br>ssh主机（Server端）用RSA加密方式产生一个1024bit的RSA-key，用来产生公约与私钥的演算方法：</p>
+<ol>
+<li>当ssh daemon（sshd）启动时，就会产生一个768-bit的公钥（或称为Server Key）存放在Server中</li>
+<li>当client端的联机请求发送后，Server将公钥发送给client，此时client会对比判断公钥的正确性，判断的依据/etc/ssh/ssh_knownhosts、$HOME/.ssh/known_hosts</li>
+<li>client端接收768bit的Server Key之后，client自己也随机产生一个256bit的私钥（private key，或host key），并且以加密的方式传送给Server</li>
+<li>Server与client在此联机过程中，就以一对1024bit的key pair来进行数据的传递</li>
+</ol>
+<p><strong>补充说明：</strong></p>
+<p>Public Key是放在Server上，而Client的软件需要能接收Public Key，计算出Private key，并把二者的组合成一把独一无二的key pair（因为Client每次的256bit的Private key是随机产生的），在Client端的用户默认目录下$HOME/.ssh/known_keys会记录曾经联机过的主机的Public Key，用以确认每次来自该主机的联机是否正确</p>
+<p>###version 2<br>在version 1的联机过程中，当Server接收Client的Private key之后，就不会针对该联机的key pair进行校验，如过黑客传送了恶意代码，由于主机端部会检验联机的正确性，所以可能会接收该程序代码。</p>
+<p>在version 2中增加了一个确认联机正确性的diff-hellman机制在每次数据传输中Server都会以这种机制校验资料来源是否正确</p>
+<h2 id="OperSSL软件："><a href="#OperSSL软件：" class="headerlink" title="OperSSL软件："></a>OperSSL软件：</h2><p>OpenSSL是一种比较常见的SSH服务端和客户端软件。提供了sshd、shell、sftp功能，其默认端口是22，在Redhat、CentOS等Linux操作系统中的默认SSH Daemon就是这个了。</p>
+<h3 id="下面对这个软件的几种用法加以说明："><a href="#下面对这个软件的几种用法加以说明：" class="headerlink" title="下面对这个软件的几种用法加以说明："></a>下面对这个软件的几种用法加以说明：</h3><p><strong>A. Server keys记录：$HOME/.ssh/known_hosts</strong></p>
+<p>当Client端接收来自Server端的Public key之后，会主动的对比这个key的正确性，有下面的两种情况：</p>
+<ol>
+<li>没有记录，那么会出现提示，是否接收来自Server的Public Key</li>
+<li>对比成功，直接提示输入密码</li>
+<li>如果出现了这样的登录提示：<strong> warning: Remote host identification has changed </strong>那么说明上次登录的远程ssh主机的key已经被更改了，原因可能是Server的重启、重装或者更新了相关的软件，这时候的处理方式是将$HOME/.ssh/known_hosts文件中与主机相关的字段删除，重新接收来自Server的Public key</li>
+</ol>
+<p><strong>B. 设置不用输入用户名和密码就能立即登录的目标主机</strong></p>
+<p>原理：将Client端产生的key复制到Server中</p>
+<p>在Client向Server登录时，由于两者在ssh要联机的信号传递中，就已经对比过key了，因此可以立即进入数据传输，而不需要输入密码。</p>
+<ol>
+<li>在Client端建立Public key和Private key两个密钥，命令为ssh-keygen</li>
+<li>将Private-key放在client的默认目录下，$HOME/.ssh，并为该用户可读的状态</li>
+<li>把Public key放在任何一个你希望要用来登录主机的Server的某user的默认目录中的认证文件中</li>
+</ol>
+<p>##生成 Git SSH-key<br>当你第一次从git资料库中clone项目时，可能会需要配置SSH-key，因为项目本地端和远程端的项目管理是基于SSH的，下面让我们一起看看SSH-key的配置过程。</p>
+<p>###设置Git的username 和 email<br>在你生成SSH前，需要在本地进行用户名和email的验证</p>
+<p><strong>代码如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;youruser.name&quot;</span><br><span class="line">$ git config --global user.email &quot;youremailusername&quot;</span><br></pre></td></tr></table></figure>
+<p>###生成SSH密钥的过程：</p>
+<p>####首先查看你的本地是否已经有ssh密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br></pre></td></tr></table></figure>
+<p><code>如果没有密钥就不会有此文件，如有有悔备份删除</code></p>
+<p>####生成密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;youremailusername&quot;</span><br></pre></td></tr></table></figure>
+<p>连续按3个回车键，密码为空。</p>
+<p>会得到以下消息:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /home/tekkub/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /home/tekkub/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br></pre></td></tr></table></figure>
+<p>最后会得到两个文件</p>
+<ol>
+<li>id_ rsa</li>
+<li>id_rsa.pub</li>
+</ol>
+<p>####查询SSH key</p>
+<p>你的SSH key存在于生成的<code>id_rsa.pub</code>的文件中，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>当执行上条命令的时候，如果已经生成key，则会出现类似<br><strong> ssh-rsa  AAAAB3NzaC1yc2EAAAADAQABAAABAQC2Z/MOZdADABODQjvGDK+5j7IBefKFQPOen0aq1GpIzPFHclL62ddhrbjQUZ9IeDhxYwDU7Aq….wisher@wisher.local </strong><br>的字符串，这个就是本地生成的SSH key。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/29/CocoaPods的安装过程/" rel="next" title="CocoaPods的安装过程">
+                <i class="fa fa-chevron-left"></i> CocoaPods的安装过程
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/29/git使用-merage/" rel="prev" title="git使用-merage">
+                git使用-merage <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/29/创建SSH/"
+           data-title="创建SSH" data-url="http://yoursite.com/2016/03/29/创建SSH/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Chris Liu" />
+          <p class="site-author-name" itemprop="name">Chris Liu</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/liucong0812" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/wisherCong" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> Others
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-功能"><span class="nav-number">1.</span> <span class="nav-text">SSH 功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH工作机制："><span class="nav-number">2.</span> <span class="nav-text">SSH工作机制：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接方式"><span class="nav-number">3.</span> <span class="nav-text">连接方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OperSSL软件："><span class="nav-number">4.</span> <span class="nav-text">OperSSL软件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面对这个软件的几种用法加以说明："><span class="nav-number">4.1.</span> <span class="nav-text">下面对这个软件的几种用法加以说明：</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chris Liu</span>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chriscong"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

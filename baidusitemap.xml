@@ -2,4 +2,81 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
+    
+    
+    
+  <url>
+    <loc>http://yoursite.com/2016/03/29/hello-world/</loc>
+    <lastmod>2016-03-29T11:00:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-03-29T10:15:56.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/03/29/%E5%88%9B%E5%BB%BASSH/</loc>
+    <lastmod>2016-03-29T10:59:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>创建SSH</title>
+        <pubTime>2016-03-29T10:27:46.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/03/29/git%E4%BD%BF%E7%94%A8-merage/</loc>
+    <lastmod>2016-03-29T10:29:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>git使用-merage</title>
+        <pubTime>2016-03-29T10:28:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/03/29/CocoaPods%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2016-03-29T10:28:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>CocoaPods的安装过程</title>
+        <pubTime>2016-03-29T10:27:20.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/03/29/my-first-Blog/</loc>
+    <lastmod>2016-03-29T10:19:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>my first Blog</title>
+        <pubTime>2016-03-29T10:19:49.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
 </urlset>
