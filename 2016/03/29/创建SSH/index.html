@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="基础技术," />
 
 
 
@@ -57,22 +57,19 @@
 
 
 
-<meta name="description" content="#How to Creation SSH
-##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
-SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
+<meta name="description" content="#How to Creation SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平">
 <meta property="og:type" content="article">
 <meta property="og:title" content="创建SSH">
 <meta property="og:url" content="http://yoursite.com/2016/03/29/创建SSH/index.html">
 <meta property="og:site_name" content="我是一颗葱">
-<meta property="og:description" content="#How to Creation SSH
-##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
-SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
-<meta property="og:updated_time" content="2016-03-29T10:59:14.000Z">
+<meta property="og:description" content="#How to Creation SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平">
+<meta property="og:updated_time" content="2016-03-30T06:14:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="创建SSH">
-<meta name="twitter:description" content="#How to Creation SSH
-##SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
-SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端">
+<meta name="twitter:description" content="#How to Creation SSHSSH是Source Shell Protocol的缩写，SSh是为建立在应用层和传输层基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。
+SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平">
 
 
 
@@ -266,48 +263,11 @@ SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平�
       
 
       
-        <p>#How to Creation SSH</p>
-<p>##SSH<br>SSH是<code>Source Shell Protocol</code>的缩写，SSh是为建立在<code>应用层</code>和<code>传输层</code>基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。</p>
+        <p>#How to Creation SSH<br>SSH是<code>Source Shell Protocol</code>的缩写，SSh是为建立在<code>应用层</code>和<code>传输层</code>基础上的安全协议。SSH是目前较为可靠，专为远程登录会话和其他网络服务提供安全性的协议。利用SSH可以有效防止远程管理过程中的信息泄漏问题。</p>
 <p>SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平台。SSH在正确使用时可以弥补网络中的漏洞，SSH客户端适用于多种平台，几乎所有的UNIX平台，包括HP-UX、Linux、AIX、Solaris等等</p>
 <p>传统的网络服务程序，比如ftp、pop和telnet在本质上都是不安全的，因为他们在网络上是用明文进行口令的传输，有一些别有用心的人就可以非常容易的截取这些口令和数据。</p>
 <p>通过SSH，可以把所有传输的数据进行加密，而且SSH还有一个额外的好处就是传输的数据是经过加密处理的，所以可以加快传输的速度。SSH还有其他的很多功能，他既可以替代Telnet，又可以为FTP、PoP、甚至是PPP提供一个安全的通道。</p>
-<h2 id="SSH-功能"><a href="#SSH-功能" class="headerlink" title="SSH 功能"></a>SSH 功能</h2><p>SSH可以提供两种功能：</p>
-<ol>
-<li>SSH服务，提供远程登录</li>
-<li>类似于FTP的sftp-server，用于基于ssh的文件传输</li>
-</ol>
-<h2 id="SSH工作机制："><a href="#SSH工作机制：" class="headerlink" title="SSH工作机制："></a>SSH工作机制：</h2><p>他们的工作机制大致是本地客户端发送一个连接请求到远程服务器，服务端检查申请的包和ip地址再发送密钥给ssh的客户端，本地再将密钥发送给服务端，自此建立连接。</p>
-<h2 id="连接方式"><a href="#连接方式" class="headerlink" title="连接方式"></a>连接方式</h2><p>###version 1<br>ssh主机（Server端）用RSA加密方式产生一个1024bit的RSA-key，用来产生公约与私钥的演算方法：</p>
-<ol>
-<li>当ssh daemon（sshd）启动时，就会产生一个768-bit的公钥（或称为Server Key）存放在Server中</li>
-<li>当client端的联机请求发送后，Server将公钥发送给client，此时client会对比判断公钥的正确性，判断的依据/etc/ssh/ssh_knownhosts、$HOME/.ssh/known_hosts</li>
-<li>client端接收768bit的Server Key之后，client自己也随机产生一个256bit的私钥（private key，或host key），并且以加密的方式传送给Server</li>
-<li>Server与client在此联机过程中，就以一对1024bit的key pair来进行数据的传递</li>
-</ol>
-<p><strong>补充说明：</strong></p>
-<p>Public Key是放在Server上，而Client的软件需要能接收Public Key，计算出Private key，并把二者的组合成一把独一无二的key pair（因为Client每次的256bit的Private key是随机产生的），在Client端的用户默认目录下$HOME/.ssh/known_keys会记录曾经联机过的主机的Public Key，用以确认每次来自该主机的联机是否正确</p>
-<p>###version 2<br>在version 1的联机过程中，当Server接收Client的Private key之后，就不会针对该联机的key pair进行校验，如过黑客传送了恶意代码，由于主机端部会检验联机的正确性，所以可能会接收该程序代码。</p>
-<p>在version 2中增加了一个确认联机正确性的diff-hellman机制在每次数据传输中Server都会以这种机制校验资料来源是否正确</p>
-<h2 id="OperSSL软件："><a href="#OperSSL软件：" class="headerlink" title="OperSSL软件："></a>OperSSL软件：</h2><p>OpenSSL是一种比较常见的SSH服务端和客户端软件。提供了sshd、shell、sftp功能，其默认端口是22，在Redhat、CentOS等Linux操作系统中的默认SSH Daemon就是这个了。</p>
-<h3 id="下面对这个软件的几种用法加以说明："><a href="#下面对这个软件的几种用法加以说明：" class="headerlink" title="下面对这个软件的几种用法加以说明："></a>下面对这个软件的几种用法加以说明：</h3><p><strong>A. Server keys记录：$HOME/.ssh/known_hosts</strong></p>
-<p>当Client端接收来自Server端的Public key之后，会主动的对比这个key的正确性，有下面的两种情况：</p>
-<ol>
-<li>没有记录，那么会出现提示，是否接收来自Server的Public Key</li>
-<li>对比成功，直接提示输入密码</li>
-<li>如果出现了这样的登录提示：<strong> warning: Remote host identification has changed </strong>那么说明上次登录的远程ssh主机的key已经被更改了，原因可能是Server的重启、重装或者更新了相关的软件，这时候的处理方式是将$HOME/.ssh/known_hosts文件中与主机相关的字段删除，重新接收来自Server的Public key</li>
-</ol>
-<p><strong>B. 设置不用输入用户名和密码就能立即登录的目标主机</strong></p>
-<p>原理：将Client端产生的key复制到Server中</p>
-<p>在Client向Server登录时，由于两者在ssh要联机的信号传递中，就已经对比过key了，因此可以立即进入数据传输，而不需要输入密码。</p>
-<ol>
-<li>在Client端建立Public key和Private key两个密钥，命令为ssh-keygen</li>
-<li>将Private-key放在client的默认目录下，$HOME/.ssh，并为该用户可读的状态</li>
-<li>把Public key放在任何一个你希望要用来登录主机的Server的某user的默认目录中的认证文件中</li>
-</ol>
-<p>##生成 Git SSH-key<br>当你第一次从git资料库中clone项目时，可能会需要配置SSH-key，因为项目本地端和远程端的项目管理是基于SSH的，下面让我们一起看看SSH-key的配置过程。</p>
-<p>###设置Git的username 和 email<br>在你生成SSH前，需要在本地进行用户名和email的验证</p>
-<p><strong>代码如下：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;youruser.name&quot;</span><br><span class="line">$ git config --global user.email &quot;youremailusername&quot;</span><br></pre></td></tr></table></figure>
+<a id="more"></a><strong>阅读全文&gt;&gt;</strong><br><br>## SSH 功能<br><br>SSH可以提供两种功能：<br><br>1. SSH服务，提供远程登录<br>2. 类似于FTP的sftp-server，用于基于ssh的文件传输<br><br><br>## SSH工作机制：<br><br>他们的工作机制大致是本地客户端发送一个连接请求到远程服务器，服务端检查申请的包和ip地址再发送密钥给ssh的客户端，本地再将密钥发送给服务端，自此建立连接。<br><br><br>## 连接方式<br><br>###version 1<br>ssh主机（Server端）用RSA加密方式产生一个1024bit的RSA-key，用来产生公约与私钥的演算方法：<br><br>1. 当ssh daemon（sshd）启动时，就会产生一个768-bit的公钥（或称为Server Key）存放在Server中<br>2. 当client端的联机请求发送后，Server将公钥发送给client，此时client会对比判断公钥的正确性，判断的依据/etc/ssh/ssh_knownhosts、$HOME/.ssh/known_hosts<br>3. client端接收768bit的Server Key之后，client自己也随机产生一个256bit的私钥（private key，或host key），并且以加密的方式传送给Server<br>4. Server与client在此联机过程中，就以一对1024bit的key pair来进行数据的传递<br><br><br><strong>补充说明：</strong><br><br>Public Key是放在Server上，而Client的软件需要能接收Public Key，计算出Private key，并把二者的组合成一把独一无二的key pair（因为Client每次的256bit的Private key是随机产生的），在Client端的用户默认目录下$HOME/.ssh/known_keys会记录曾经联机过的主机的Public Key，用以确认每次来自该主机的联机是否正确<br>###version 2<br>在version 1的联机过程中，当Server接收Client的Private key之后，就不会针对该联机的key pair进行校验，如过黑客传送了恶意代码，由于主机端部会检验联机的正确性，所以可能会接收该程序代码。<br><br>在version 2中增加了一个确认联机正确性的diff-hellman机制在每次数据传输中Server都会以这种机制校验资料来源是否正确<br><br><br>## OperSSL软件：<br>OpenSSL是一种比较常见的SSH服务端和客户端软件。提供了sshd、shell、sftp功能，其默认端口是22，在Redhat、CentOS等Linux操作系统中的默认SSH Daemon就是这个了。<br><br>### 下面对这个软件的几种用法加以说明：<br><strong>A. Server keys记录：$HOME/.ssh/known_hosts</strong><br><br>当Client端接收来自Server端的Public key之后，会主动的对比这个key的正确性，有下面的两种情况：<br><br>1. 没有记录，那么会出现提示，是否接收来自Server的Public Key<br>2. 对比成功，直接提示输入密码<br>3. 如果出现了这样的登录提示：<strong> warning: Remote host identification has changed </strong>那么说明上次登录的远程ssh主机的key已经被更改了，原因可能是Server的重启、重装或者更新了相关的软件，这时候的处理方式是将$HOME/.ssh/known_hosts文件中与主机相关的字段删除，重新接收来自Server的Public key<br><br><strong>B. 设置不用输入用户名和密码就能立即登录的目标主机</strong><br><br>原理：将Client端产生的key复制到Server中<br><br>在Client向Server登录时，由于两者在ssh要联机的信号传递中，就已经对比过key了，因此可以立即进入数据传输，而不需要输入密码。<br><br>1. 在Client端建立Public key和Private key两个密钥，命令为ssh-keygen<br>2. 将Private-key放在client的默认目录下，$HOME/.ssh，并为该用户可读的状态<br>3. 把Public key放在任何一个你希望要用来登录主机的Server的某user的默认目录中的认证文件中<br><br>##生成 Git SSH-key<br>当你第一次从git资料库中clone项目时，可能会需要配置SSH-key，因为项目本地端和远程端的项目管理是基于SSH的，下面让我们一起看看SSH-key的配置过程。<br><br>###设置Git的username 和 email<br>在你生成SSH前，需要在本地进行用户名和email的验证<br><br><strong>代码如下：</strong><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;youruser.name&quot;</span><br><span class="line">$ git config --global user.email &quot;youremailusername&quot;</span><br></pre></td></tr></table></figure>
 <p>###生成SSH密钥的过程：</p>
 <p>####首先查看你的本地是否已经有ssh密钥</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br></pre></td></tr></table></figure>
@@ -338,12 +298,18 @@ SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平�
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/基础技术/" rel="tag">#基础技术</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/29/CocoaPods的安装过程/" rel="next" title="CocoaPods的安装过程">
+              <a href="/2015/04/29/CocoaPods的安装过程/" rel="next" title="CocoaPods的安装过程">
                 <i class="fa fa-chevron-left"></i> CocoaPods的安装过程
               </a>
             
@@ -425,13 +391,20 @@ SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -488,7 +461,7 @@ SSH最初是UNIX系统上的一个程序，后来逐渐扩展到其他操作平�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH-功能"><span class="nav-number">1.</span> <span class="nav-text">SSH 功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH工作机制："><span class="nav-number">2.</span> <span class="nav-text">SSH工作机制：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接方式"><span class="nav-number">3.</span> <span class="nav-text">连接方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OperSSL软件："><span class="nav-number">4.</span> <span class="nav-text">OperSSL软件：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面对这个软件的几种用法加以说明："><span class="nav-number">4.1.</span> <span class="nav-text">下面对这个软件的几种用法加以说明：</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
